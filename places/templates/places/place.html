@@ -1,0 +1,13 @@
+{% extends 'core/base.html'%}
+{% block page %}
+
+<h2>{{ place_object.name }}</h2>
+<h3>{{ place_object.location }}</h3>
+<div>{{ place_object.description }}</div>
+<hr>
+<div>Просмотров: {{ place_object.views_count }}</div>
+<br>
+<a href="{% url 'places:edit-place' place_object.id%}" class="btn btn-lg btn-warning">Изменить</a>
+<a href="{% url 'places:delete-place' place_object.id%}" class="btn btn-lg btn-danger">Удалить</a>
+
+{% endblock %}
