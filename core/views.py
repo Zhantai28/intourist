@@ -1,10 +1,9 @@
 from django.shortcuts import render
+from django.views import generic, View
 
-# Create your views here.
 
-
-def homepage(request):
-    return render(request, 'core/index.html')
+class HomeView(generic.TemplateView):
+    template_name = "core/index.html"
 
 
 def profile(request):

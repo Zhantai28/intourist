@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import homepage, profile
+from .views import profile, HomeView
 
 app_name = 'core'
 
 urlpatterns = [
-    path('', homepage, name="homepage"),
+    path('', HomeView.as_view(), name="homepage"),
     path('profile/', profile, name="profile")
 ]
