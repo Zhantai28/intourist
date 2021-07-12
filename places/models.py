@@ -32,6 +32,8 @@ class Feedback(models.Model):
         to=Place, on_delete=models.CASCADE, verbose_name="Место")
     text = models.TextField(verbose_name="Текст обратной связи")
 
+    checked = models.BooleanField(default=False, verbose_name="Обработано")
+
     def __str__(self):
         return self.text[:20]
 
